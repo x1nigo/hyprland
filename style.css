@@ -1,0 +1,25 @@
+* {
+	font-family: monospace, Noto Sans Mono;
+	font-size: 10pt;
+}
+
+window {
+	background-color: #1d2021;
+	border-radius: 0px;
+}
+
+#input {
+	background-color: #121212;
+	color: #1d2021;
+	border: none;
+	border-radius: 0px;
+}
+
+#text:selected {
+	background-color: #161618;
+	color: #dc2800;
+}
+
+#entry:selected {
+	background-color: #161618;
+}

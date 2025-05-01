@@ -1,0 +1,115 @@
+// -* mode: jsonc -*-
+{
+    // "layer": "top", // Waybar at top layer
+    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    // "height": 24, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    "spacing": 6, // Gaps between modules (4px)
+	"margin-left": 8,
+	"margin-right": 8,
+    // Choose the order of the modules
+    "modules-left": [
+		"custom/power",
+		"memory",
+		"cpu"
+    ],
+    "modules-center": [
+        "hyprland/workspaces",
+        "clock"
+    ],
+    "modules-right": [
+        "network",
+        "wireplumber",
+        "backlight",
+        "battery"
+    ],
+    // Modules configuration
+    "hyprland/workspaces": {
+	    "disable-scroll": true,
+	    "all-outputs": false,
+	    "warp-on-scroll": false,
+	    "format": "{icon}",
+		"format-icons": {
+			"1": "󰘻",
+			"2": "󰘻",
+			"3": "󰘻",
+			"4": "󰘻",
+			"5": "󰘻",
+			"6": "󰘻",
+			"7": "󰘻",
+			"8": "󰘻",
+			"9": "󰘻"
+		},
+		"persistent-workspaces": {
+			"1": [],
+			"2": [],
+			"3": [],
+			"4": [],
+			"5": [],
+			"6": [],
+			"7": [],
+			"8": [],
+			"9": []
+		}
+    },
+	"custom/power": {
+		"format": "󰣇 ",
+		"on-click": "wofi --show run"
+	},
+    "clock": {
+        // "timezone": "America/New_York",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+	"format": "{:%I:%M%p}",
+        "format-alt": "{:%Y %b %d (%a)}"
+    },
+    "cpu": {
+        "format": "󱤓 {usage}%",
+        "tooltip": false
+    },
+    "wireplumber": {
+	    "format": "{icon} {volume}%",
+		"format-icons": ["       ", " 󰝤     ", " 󰝤󰝤    ", " 󰝤󰝤󰝤   ", " 󰝤󰝤󰝤󰝤  ", " 󰝤󰝤󰝤󰝤󰝤 ", " 󰝤󰝤󰝤󰝤󰝤󰝤"],
+	    "format-muted": " ",
+		"states": {
+			"high": 75,
+			"medium": 50,
+			"medium-low": 25,
+			"low": 0
+		}
+    },
+    "memory": {
+        "format": " {}%"
+    },
+    "temperature": {
+        // "thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C {icon}",
+        "format": "󰏈 {temperatureC}°C"
+    },
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "󰛨 {percent}%"
+    },
+    "hyprland/language": {
+	    "format": "{long}"
+    },
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+		"format": "{icon} {capacity}%",
+		"format-charging": " {capacity}%",
+		"format-icons": ["", "", "", "", ""]
+    },
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "󰤨 {signalStrength}%",
+        "format-ethernet": "{ipaddr}/{cidr}",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "format-linked": "{ifname} (No IP)",
+        "format-disconnected": "󰤭 Disconnected!"
+    }
+}

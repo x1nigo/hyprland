@@ -1,0 +1,8 @@
+mode=run
+term=st
+insensitivity=true
+hide_scroll=true
+lines=10
+width=35%
+prompt=Search
+columns=1
