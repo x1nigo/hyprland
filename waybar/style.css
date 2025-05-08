@@ -13,10 +13,20 @@ window#waybar.hidden {
     opacity: 0.2;
 }
 
-#workspaces button {
+#workspaces {
+	background-color: #161618;
+	padding: 0px 8px;
 	margin-top: 6px;
+	margin-bottom: 0px;
+	border-radius: 8px;
+}
+
+#workspaces button {
+	margin: 2px;
 	padding: 0px 2px;
-    color: #878787;
+	color: #878787;
+	background-color: #121212;
+	border-radius: 28px;
 }
 
 #workspaces button.empty {
@@ -24,11 +34,12 @@ window#waybar.hidden {
 }
 
 #workspaces button.active {
-	color: #dc2800;
+	background-color: #dc2800;
+	color: #1d2021;
 }
 
 #workspaces button.urgent {
-    background-color: #eb4d4b;
+	background-color: #eb4d4b;
 }
 
 #clock,
@@ -42,7 +53,7 @@ window#waybar.hidden {
 #idle_inhibitor,
 #custom-logo,
 #mpd {
-	padding: 0 8px;
+	padding: 0 12px;
 	background-color: #161618;
 	color: #a7a7a7;
 	border-radius: 8px;
@@ -68,7 +79,6 @@ window#waybar.hidden {
 }
 
 #custom-logo {
-	padding: 0 8px;
 	background-color: #0078d7;
 	color: #1d2021;
 	border-radius: 8px;
