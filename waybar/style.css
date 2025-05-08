@@ -15,7 +15,7 @@ window#waybar.hidden {
 
 #workspaces button {
 	margin-top: 6px;
-	padding: 0px 6px;
+	padding: 0px 2px;
     color: #878787;
 }
 
@@ -35,24 +35,16 @@ window#waybar.hidden {
 #battery,
 #cpu,
 #memory,
-#disk,
-#temperature,
 #backlight,
 #network,
-#pulseaudio,
 #wireplumber,
-#custom-media,
-#custom-power,
 #tray,
-#mode,
 #idle_inhibitor,
-#scratchpad,
-#power-profiles-daemon,
 #custom-logo,
 #mpd {
-    padding: 0 8px;
-    color: #d7d7d7;
+	padding: 0 8px;
 	background-color: #161618;
+	color: #a7a7a7;
 	border-radius: 8px;
 	margin-top: 6px;
 	margin-bottom: 0px;
@@ -76,33 +68,13 @@ window#waybar.hidden {
 }
 
 #custom-logo {
-	color: #0078d7;
-	font-size: 12pt;
-}
-
-#memory {
-	color: #d75757;
-}
-
-#cpu {
-	color: #f8c471;
-}
-
-#network {
-	color: #45b39d;
-}
-
-#wireplumber {
-	color: #34495e;
-}
-
-#wireplumber.muted {
-	background-color: #dc2800;
+	padding: 0 8px;
+	background-color: #0078d7;
 	color: #1d2021;
-}
-
-#backlight {
-	color: #9757d7;
+	border-radius: 8px;
+	margin-top: 6px;
+	margin-bottom: 0px;
+	font-size: 12pt;
 }
 
 #battery {
