@@ -9,15 +9,15 @@
 	"margin-right": 8,
     // Choose the order of the modules
     "modules-left": [
-		"custom/power",
-		"memory",
-		"cpu"
+	"custom/logo"
     ],
     "modules-center": [
         "hyprland/workspaces",
         "clock"
     ],
     "modules-right": [
+	"memory",
+	"cpu",
         "network",
         "wireplumber",
         "backlight",
@@ -52,15 +52,15 @@
 			"9": []
 		}
     },
-	"custom/power": {
-		"format": "󰣇 ",
+	"custom/logo": {
+		"format": "󰣇",
 		"on-click": "wofi --show run"
 	},
     "clock": {
         // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-	"format": "{:%I:%M%p}",
-        "format-alt": "{:%Y %b %d (%a)}"
+	"format": "󰥔 {:%I:%M%p}",
+        "format-alt": "󰥔 {:%Y %b %d (%a)}"
     },
     "cpu": {
         "format": "󱤓 {usage}%",
