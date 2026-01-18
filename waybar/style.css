@@ -1,12 +1,12 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: monospace, FontAwesome;
+    font-family: sans;
     font-size: 10pt;
 	font-weight: normal;
 }
 
 window#waybar {
-    background-color: transparent;
+    background-color: #121618;
 }
 
 window#waybar.hidden {
@@ -14,19 +14,18 @@ window#waybar.hidden {
 }
 
 #workspaces {
-	background-color: #161618;
 	padding: 0px 8px;
-	margin-top: 6px;
-	margin-bottom: 0px;
+	margin-top: 2px;
+	margin-bottom: 2px;
 	border-radius: 8px;
 }
 
 #workspaces button {
-	margin: 2px;
-	padding: 0px 2px;
-	color: #878787;
+	margin-right: 2px;
+	padding: 2px 2px;
+	color: #d8d8d8;
 	background-color: #121212;
-	border-radius: 28px;
+	border-radius: 2px;
 }
 
 #workspaces button.empty {
@@ -35,7 +34,7 @@ window#waybar.hidden {
 
 #workspaces button.active {
 	background-color: #dc2800;
-	color: #1d2021;
+	color: #282828;
 }
 
 #workspaces button.urgent {
@@ -43,32 +42,17 @@ window#waybar.hidden {
 }
 
 #clock,
-#battery,
+#backlight,
 #cpu,
 #memory,
-#backlight,
-#network,
 #wireplumber,
-#tray,
-#idle_inhibitor,
-#custom-logo,
-#mpd {
+#network,
+#battery {
 	padding: 0 12px;
-	background-color: #161618;
-	color: #a7a7a7;
-	border-radius: 8px;
-	margin-top: 6px;
-	margin-bottom: 0px;
-}
-
-/* If workspaces is the leftmost module, omit left margin */
-.modules-left > widget:first-child > #workspaces {
-    margin-left: 0;
-}
-
-/* If workspaces is the rightmost module, omit right margin */
-.modules-right > widget:last-child > #workspaces {
-    margin-right: 0;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	/* background-color: #121618; */
+	border-radius: 2px;
 }
 
 @keyframes blink {
@@ -78,24 +62,45 @@ window#waybar.hidden {
     }
 }
 
-#custom-logo {
-	background-color: #0078d7;
-	color: #1d2021;
-	border-radius: 8px;
-	margin-top: 6px;
-	margin-bottom: 0px;
-	font-size: 12pt;
+#clock {
+	background-color: #57d7f7;
+	color: #282828;
+}
+
+#backlight {
+	background-color: #5757d7;
+	color: #282828;
+}
+
+#cpu {
+	background-color: #ff8747;
+	color: #282828;
+}
+
+#memory {
+	background-color: #f74747;
+	color: #282828;
+}
+
+#wireplumber {
+	background-color: #57d7f7;
+	color: #282828;
+}
+
+#network {
+	background-color: #5757d7;
+	color: #282828;
 }
 
 #battery {
-	background-color: #dc2800;
-	color: #1d2021;
+	background-color: #57e7d7;
+	color: #282828;
 }
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
-    background-color: #f53c3c;
-    color: #ffffff;
+    background-color: #dc2800;
+    color: #282828;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: steps(12);
