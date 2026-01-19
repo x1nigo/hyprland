@@ -2,7 +2,7 @@
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: sans;
     font-size: 10pt;
-	font-weight: normal;
+	font-weight: bold;
 }
 
 window#waybar {
@@ -10,20 +10,19 @@ window#waybar {
 }
 
 window#waybar.hidden {
-    opacity: 0.2;
+    opacity: 0;
 }
 
 #workspaces {
 	padding: 0px 8px;
 	margin-top: 2px;
 	margin-bottom: 2px;
-	border-radius: 8px;
 }
 
 #workspaces button {
 	margin-right: 2px;
 	padding: 2px 2px;
-	color: #d8d8d8;
+	color: #282828;
 	background-color: #121212;
 	border-radius: 2px;
 }
@@ -33,12 +32,31 @@ window#waybar.hidden {
 }
 
 #workspaces button.active {
-	background-color: #dc2800;
-	color: #282828;
+	border-bottom: 2px solid #dc2800;
+	color: #d8d8d8;
 }
 
 #workspaces button.urgent {
 	background-color: #eb4d4b;
+}
+
+#workspaces button:hover {
+	background: none;
+	box-shadow: none;
+	text-shadow: none;
+	transition: none;
+	border-color: transparent;
+	background-color: inherit;
+	color: #57d7f7;
+	border-bottom: 2px solid #57d7f7;
+}
+
+#custom-logo {
+	font-weight: bold;
+	/* border-top: 2px solid #282828; */
+	/* border-bottom: 2px solid #282828; */
+	color: #282828;
+	margin-left: 12px;
 }
 
 #clock,
@@ -48,7 +66,7 @@ window#waybar.hidden {
 #wireplumber,
 #network,
 #battery {
-	padding: 0 12px;
+	padding: 0 8px;
 	margin-top: 2px;
 	margin-bottom: 2px;
 	/* background-color: #121618; */
@@ -62,38 +80,38 @@ window#waybar.hidden {
     }
 }
 
-#clock {
-	background-color: #57d7f7;
-	color: #282828;
-}
-
 #backlight {
-	background-color: #5757d7;
-	color: #282828;
+	color: #5757d7;
+	border-bottom: 2px solid #5757d7;
 }
 
 #cpu {
-	background-color: #ff8747;
-	color: #282828;
+	color: #ff8747;
+	border-bottom: 2px solid #ff8747;
 }
 
 #memory {
-	background-color: #f74747;
-	color: #282828;
+	color: #f74747;
+	border-bottom: 2px solid #f74747;
 }
 
 #wireplumber {
-	background-color: #57d7f7;
-	color: #282828;
-}
-
-#network {
-	background-color: #5757d7;
-	color: #282828;
+	color: #57d7f7;
+	border-bottom: 2px solid #57d7f7;
 }
 
 #battery {
-	background-color: #57e7d7;
+	color: #57e7d7;
+	border-bottom: 2px solid #57e7d7;
+}
+
+#network {
+	color: #5757d7;
+	border-bottom: 2px solid #5757d7;
+}
+
+#clock {
+	background-color: #dc2800;
 	color: #282828;
 }
 
