@@ -2,7 +2,7 @@
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: sans;
     font-size: 10pt;
-	font-weight: bold;
+	font-weight: normal;
 }
 
 window#waybar {
@@ -13,17 +13,22 @@ window#waybar.hidden {
     opacity: 0;
 }
 
+#custom-logo {
+	font-weight: bold;
+	/* border-top: 2px solid #282828; */
+	/* border-bottom: 2px solid #282828; */
+	background-color: #dc2800;
+	color: #282828;
+}
+
 #workspaces {
 	padding: 0px 8px;
-	margin-top: 2px;
-	margin-bottom: 2px;
 }
 
 #workspaces button {
 	margin-right: 2px;
-	padding: 2px 2px;
+	padding: 2px 0px;
 	color: #282828;
-	background-color: #121212;
 	border-radius: 2px;
 }
 
@@ -33,6 +38,7 @@ window#waybar.hidden {
 
 #workspaces button.active {
 	border-bottom: 2px solid #dc2800;
+	background-color: #111111;
 	color: #d8d8d8;
 }
 
@@ -51,12 +57,8 @@ window#waybar.hidden {
 	border-bottom: 2px solid #57d7f7;
 }
 
-#custom-logo {
-	font-weight: bold;
-	/* border-top: 2px solid #282828; */
-	/* border-bottom: 2px solid #282828; */
+#window {
 	color: #282828;
-	margin-left: 12px;
 }
 
 #clock,
@@ -65,12 +67,14 @@ window#waybar.hidden {
 #memory,
 #wireplumber,
 #network,
+#disk,
 #battery {
-	padding: 0 8px;
+	padding: 0 6px;
 	margin-top: 2px;
 	margin-bottom: 2px;
 	/* background-color: #121618; */
-	border-radius: 2px;
+	color: #d8d8d8;
+	border-radius: 0px;
 }
 
 @keyframes blink {
@@ -80,40 +84,46 @@ window#waybar.hidden {
     }
 }
 
-#backlight {
-	color: #5757d7;
+/* #backlight {
 	border-bottom: 2px solid #5757d7;
+	color: #5757d7;
 }
 
 #cpu {
-	color: #ff8747;
 	border-bottom: 2px solid #ff8747;
+	color: #ff8747;
 }
 
 #memory {
-	color: #f74747;
 	border-bottom: 2px solid #f74747;
+	color: #f74747;
 }
 
 #wireplumber {
-	color: #57d7f7;
 	border-bottom: 2px solid #57d7f7;
+	color: #57d7f7;
 }
 
 #battery {
-	color: #57e7d7;
 	border-bottom: 2px solid #57e7d7;
+	color: #57e7d7;
+}
+
+#disk {
+	border-bottom: 2px solid #8787f7;
+	color: #8787f7;
 }
 
 #network {
-	color: #5757d7;
-	border-bottom: 2px solid #5757d7;
+	border-bottom: 2px solid #ff8747;
+	color: #ff8747;
 }
 
 #clock {
 	background-color: #dc2800;
 	color: #282828;
 }
+*/
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
