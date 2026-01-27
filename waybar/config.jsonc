@@ -4,7 +4,7 @@
     // "position": "bottom", // Waybar position (top|bottom|left|right)
     // "height": 24, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
-    "spacing": 6, // Gaps between modules (4px)
+    // "spacing": 6, // Gaps between modules (4px)
 	/* "margin-top": 4,
 	"margin-right": 8,
 	"margin-bottom": 0,
@@ -12,8 +12,7 @@
     // Choose the order of the modules
     "modules-left": [
 		"custom/logo",
-        "hyprland/workspaces",
-        "hyprland/window"
+        "hyprland/workspaces"
     ],
     "modules-center": [
     ],
@@ -66,7 +65,7 @@
         "tooltip": false
     },
     "memory": {
-        "format": "󰒋   {}%"
+        "format": "󰒋  {}%"
     },
     "wireplumber": {
 	    "format": "   {volume}%",
@@ -79,16 +78,16 @@
             "critical": 15
         },
 		"format": "{icon}    {capacity}%",
-		"format-charging": "   {capacity}%",
+		"format-charging": "  {capacity}%",
 		"format-icons": ["", "", "", "", ""]
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "󰤨    {signalStrength}%",
+        "format-wifi": "󰤨   {signalStrength}%",
         "format-ethernet": "{ipaddr}/{cidr}",
         "tooltip-format": "{ifname} via {gwaddr}",
         "format-linked": "{ifname} (No IP)",
-        "format-disconnected": "󰤭    Disconnected!"
+        "format-disconnected": "󰤭   Disconnected!"
     },
 	"disk": {
 		"format": "   {free} free"

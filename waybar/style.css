@@ -15,10 +15,8 @@ window#waybar.hidden {
 
 #custom-logo {
 	font-weight: bold;
-	/* border-top: 2px solid #282828; */
-	/* border-bottom: 2px solid #282828; */
-	background-color: #dc2800;
-	color: #282828;
+	background-color: #21242b;
+	color: #d8d8d8;
 }
 
 #workspaces {
@@ -33,7 +31,7 @@ window#waybar.hidden {
 }
 
 #workspaces button.empty {
-	color: #282828;
+	color: #21242b;
 }
 
 #workspaces button.active {
@@ -52,13 +50,13 @@ window#waybar.hidden {
 	text-shadow: none;
 	transition: none;
 	border-color: transparent;
-	background-color: inherit;
-	color: #57d7f7;
-	border-bottom: 2px solid #57d7f7;
+	background-color: #111111;
+	color: #ff8747;
+	border-bottom: 2px solid #ff8747;
 }
 
 #window {
-	color: #282828;
+	color: #21242b;
 }
 
 #clock,
@@ -70,21 +68,20 @@ window#waybar.hidden {
 #disk,
 #battery {
 	padding: 0 6px;
-	margin-top: 2px;
-	margin-bottom: 2px;
-	/* background-color: #121618; */
+	background-color: #111111;
+	/* border-bottom: 2px solid #21242b; */
 	color: #d8d8d8;
-	border-radius: 0px;
 }
 
 @keyframes blink {
     to {
-        background-color: #ffffff;
-        color: #000000;
+		border-bottom: 2px solid #d8d8d8;
+        color: #d8d8d8;
     }
 }
 
-/* #backlight {
+/*
+#backlight {
 	border-bottom: 2px solid #5757d7;
 	color: #5757d7;
 }
@@ -120,17 +117,17 @@ window#waybar.hidden {
 }
 
 #clock {
-	background-color: #dc2800;
-	color: #282828;
+	border-bottom: 2px solid #21242b;
+	color: #d8d8d8;
 }
 */
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
-    background-color: #dc2800;
-    color: #282828;
+    color: #dc2800;
+	border-bottom: 2px solid #dc2800;
     animation-name: blink;
-    animation-duration: 0.5s;
+    animation-duration: 1.0s;
     animation-timing-function: steps(12);
     animation-iteration-count: infinite;
     animation-direction: alternate;
