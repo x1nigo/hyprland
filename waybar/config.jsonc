@@ -58,14 +58,14 @@
 	},
     "backlight": {
         // "device": "acpi_video1",
-        "format": "󰖨   {percent}%"
+        "format": "󰓠    {percent}%"
     },
     "cpu": {
-        "format": "󰹞   {usage}%",
+        "format": "󰍹   {usage}%",
         "tooltip": false
     },
     "memory": {
-        "format": "󰒋  {}%"
+        "format": "   {}%"
     },
     "wireplumber": {
 	    "format": "   {volume}%",
@@ -90,7 +90,7 @@
         "format-disconnected": "󰤭   Disconnected!"
     },
 	"disk": {
-		"format": "   {free} free"
+		"format": "󰧯  {free} free"
 	},
     "clock": {
         // "timezone": "America/New_York",
