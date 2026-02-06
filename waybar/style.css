@@ -1,8 +1,8 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: sans;
+    font-family: sans-serif;
     font-size: 10pt;
-	font-weight: normal;
+	font-weight: bold;
 }
 
 window#waybar {
@@ -14,30 +14,32 @@ window#waybar.hidden {
 }
 
 #custom-logo {
+	font-size: 10pt;
 	font-weight: normal;
-	background-color: #111111;
-	color: #d8d8d8;
+	color: #b7b7b7;
 }
 
 #workspaces {
-	padding: 0px 8px;
+	padding: 0px 0px;
 }
 
 #workspaces button {
-	margin-right: 2px;
 	padding: 2px 0px;
-	color: #282828;
+	border-bottom: 2px solid #21242b;
+	color: #b7b7b7;
 	border-radius: 2px;
 }
 
 #workspaces button.empty {
+	border-bottom: 2px solid transparent;
+	background-color: #121618;
 	color: #21242b;
 }
 
 #workspaces button.active {
-	border-bottom: 2px solid #870000;
+	border-bottom: 2px solid #57d7f7;
 	background-color: #111111;
-	color: #d8d8d8;
+	color: #57d7f7;
 }
 
 #workspaces button.urgent {
@@ -51,12 +53,13 @@ window#waybar.hidden {
 	transition: none;
 	border-color: transparent;
 	background-color: #111111;
-	color: #ff8747;
-	border-bottom: 2px solid #ff8747;
+	color: #57e7d7;
+	border-bottom: 2px solid #57e7d7;
 }
 
 #window {
-	color: #21242b;
+	color: #b7b7b7;
+	padding: 0px 8px;
 }
 
 #clock,
@@ -70,13 +73,13 @@ window#waybar.hidden {
 	padding: 0 6px;
 	/* background-color: #111111; */
 	/* border-bottom: 2px solid #21242b; */
-	color: #d8d8d8;
+	color: #b7b7b7;
 }
 
 @keyframes blink {
     to {
-		border-bottom: 2px solid #d8d8d8;
-        color: #d8d8d8;
+		border-bottom: 2px solid #b7b7b7;
+        color: #b7b7b7;
     }
 }
 
@@ -118,7 +121,7 @@ window#waybar.hidden {
 
 #clock {
 	border-bottom: 2px solid #21242b;
-	color: #d8d8d8;
+	color: #b7b7b7;
 }
 */
 

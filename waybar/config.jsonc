@@ -4,50 +4,47 @@
     // "position": "bottom", // Waybar position (top|bottom|left|right)
     // "height": 24, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
-    // "spacing": 6, // Gaps between modules (4px)
-	/* "margin-top": 4,
+    "spacing": 6, // Gaps between modules (4px)
+	"margin-top": 4,
 	"margin-right": 8,
 	"margin-bottom": 0,
-	"margin-left": 8, */
+	"margin-left": 8,
     // Choose the order of the modules
     "modules-left": [
 		"custom/logo",
-        "hyprland/workspaces"
+		"custom/separator",
+        "hyprland/workspaces",
+		"custom/separator",
+        "hyprland/window"
     ],
     "modules-center": [
+        "clock"
     ],
     "modules-right": [
         "backlight",
 		"cpu",
 		"memory",
         "wireplumber",
+		"custom/separator",
 		"disk",
         "battery",
-        "network",
-        "clock"
+        "network"
     ],
     // Modules configuration
     "hyprland/workspaces": {
-	    "disable-scroll": true,
 	    "all-outputs": true,
 		"active-only": false,
-	    "warp-on-scroll": false,
-	    "format": "{name}"
-//		"persistent-workspaces": {
-//			"1": [],
-//			"2": [],
-//			"3": [],
-//			"4": [],
-//			"5": [],
-//			"6": [],
-//			"7": [],
-//			"8": [],
-//			"9": []
-//		}
+	    "format": "{name}",
+		"persistent-workspaces": {
+			"*": 9
+		}
     },
 	"custom/logo": {
 		"format": "   ",
 		"on-click": "rofi -show drun"
+	},
+	"custom/separator": {
+		"format": "|"
 	},
 	"hyprland/windowcount": {
 		"format": "[{}]"
@@ -95,7 +92,6 @@
     "clock": {
         // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-	"format": "󰥔   {:%I:%M %p}",
-	"format-alt": "󰥔   {:%Y %b %d (%a) - %I:%M %p}"
+	"format": "󰥔   {:%Y %b %d (%a) - %I:%M %p}"
     }
 }
