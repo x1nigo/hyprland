@@ -92,6 +92,6 @@
     "clock": {
         // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-	"format": "󰥔   {:%Y %b %d (%a) - %I:%M %p}"
+	"format": "{:%Y %b %d (%a) - %I:%M %p}"
     }
 }
