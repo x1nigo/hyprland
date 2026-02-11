@@ -19,13 +19,17 @@ window#waybar.hidden {
 	color: #b7b7b7;
 }
 
+#custom-separator {
+	color: #272732;
+}
+
 #workspaces {
 	padding: 0px 0px;
 }
 
 #workspaces button {
 	padding: 2px 0px;
-	border-bottom: 2px solid #21242b;
+	border-bottom: 2px solid transparent;
 	color: #b7b7b7;
 	border-radius: 0px;
 }
@@ -38,8 +42,8 @@ window#waybar.hidden {
 
 #workspaces button.active {
 	border-bottom: 2px solid transparent;
-	background-color: #b7b7b7;
-	color: #282828;
+	background-color: #1d2021;
+	color: #b7b7b7;
 }
 
 #workspaces button.urgent {
@@ -78,7 +82,8 @@ window#waybar.hidden {
 
 @keyframes blink {
     to {
-		border-bottom: 2px solid #b7b7b7;
+		border-bottom: 2px solid transparent;
+		background-color: transparent;
         color: #b7b7b7;
     }
 }
@@ -127,8 +132,9 @@ window#waybar.hidden {
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
-    color: #dc2800;
-	border-bottom: 2px solid #dc2800;
+    color: #282828;
+	background-color: #f74747;
+	border-bottom: 2px solid transparent;
     animation-name: blink;
     animation-duration: 1.0s;
     animation-timing-function: steps(12);

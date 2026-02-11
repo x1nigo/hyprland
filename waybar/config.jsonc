@@ -5,10 +5,10 @@
     // "height": 24, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 6, // Gaps between modules (4px)
-	"margin-top": 4,
+	/* "margin-top": 4,
 	"margin-right": 8,
 	"margin-bottom": 0,
-	"margin-left": 8,
+	"margin-left": 8, */
     // Choose the order of the modules
     "modules-left": [
 		"custom/logo",
@@ -35,9 +35,9 @@
 	    "all-outputs": true,
 		"active-only": false,
 	    "format": "{name}",
-		"persistent-workspaces": {
+		/* "persistent-workspaces": {
 			"*": 9
-		}
+		} */
     },
 	"custom/logo": {
 		"format": "   ",
